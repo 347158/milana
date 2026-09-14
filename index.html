@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mijn Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="nav__logo">Portfolio</a>
+            <ul class="nav__menu">
+                <li><a href="#home" class="nav__link">Home</a></li>
+                <li><a href="#about" class="nav__link">Over mij</a></li>
+                <li><a href="#projects" class="nav__link">Projecten</a></li>
+                <li><a href="#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero__content">
+                <h1 class="hero__title">Hallo, ik ben <span class="hero__highlight">Jouw Naam</span></h1>
+                <p class="hero__subtitle">Webdeveloper & Designer</p>
+                <a href="#projects" class="btn btn--primary">Bekijk mijn werk</a>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section__title">Over mij</h2>
+                <div class="about__content">
+                    <div class="about__image">
+                        <img src="images/profile.jpg" alt="Profielfoto" class="about__photo">
+                    </div>
+                    <div class="about__text">
+                        <p>Hier komt een korte beschrijving over jezelf, je vaardigheden en je passie voor webontwikkeling.</p>
+                        <div class="about__skills">
+                            <span class="skill">HTML</span>
+                            <span class="skill">CSS</span>
+                            <span class="skill">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section__title">Projecten</h2>
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <img src="images/project1.jpg" alt="Project 1" class="project-card__image">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Project 1</h3>
+                            <p class="project-card__description">Korte beschrijving van het project.</p>
+                            <div class="project-card__links">
+                                <a href="#" class="btn btn--small">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img src="images/project2.jpg" alt="Project 2" class="project-card__image">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Project 2</h3>
+                            <p class="project-card__description">Korte beschrijving van het project.</p>
+                            <div class="project-card__links">
+                                <a href="#" class="btn btn--small">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <img src="images/project3.jpg" alt="Project 3" class="project-card__image">
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Project 3</h3>
+                            <p class="project-card__description">Korte beschrijving van het project.</p>
+                            <div class="project-card__links">
+                                <a href="#" class="btn btn--small">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section__title">Contact</h2>
+                <form class="contact__form" id="contactForm">
+                    <div class="form__group">
+                        <label for="name" class="form__label">Naam</label>
+                        <input type="text" id="name" name="name" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="email" class="form__label">E-mail</label>
+                        <input type="email" id="email" name="email" class="form__input" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="message" class="form__label">Bericht</label>
+                        <textarea id="message" name="message" class="form__input form__textarea" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary">Verstuur</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2026 Jouw Naam. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
