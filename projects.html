@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projecten - Portfolio van Milana</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo">Portfolio</a>
+            <ul class="nav__menu">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="index.html#about" class="nav__link">Over mij</a></li>
+                <li><a href="projects.html" class="nav__link">Projecten</a></li>
+                <li><a href="index.html#contact" class="nav__link">Contact</a></li>
+            </ul>
+            <button class="nav__toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-page">
+            <div class="container">
+                <h1 class="section__title">Projecten</h1>
+
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">Alles</button>
+                    <button class="filter-btn" data-filter="HTML">HTML</button>
+                    <button class="filter-btn" data-filter="CSS">CSS</button>
+                    <button class="filter-btn" data-filter="JavaScript">JavaScript</button>
+                    <button class="filter-btn" data-filter="Python">Python</button>
+                </div>
+
+                <div class="projects-list">
+                    <article class="project-list-item" data-tech="HTML CSS JavaScript">
+                        <div class="project-list-item__image">1</div>
+                        <div class="project-list-item__content">
+                            <h2 class="project-list-item__title">Portfolio Website</h2>
+                            <p class="project-list-item__description">Mijn persoonlijke portfolio-website waarin ik informatie over mezelf, mijn vaardigheden en mijn projecten laat zien.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-list-item__links">
+                                <a href="#" class="btn btn--small">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-list-item" data-tech="HTML CSS JavaScript">
+                        <div class="project-list-item__image">2</div>
+                        <div class="project-list-item__content">
+                            <h2 class="project-list-item__title">To-do List</h2>
+                            <p class="project-list-item__description">Een eenvoudige webapplicatie waarmee gebruikers taken kunnen toevoegen, bekijken en verwijderen.</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JavaScript</span>
+                            </div>
+                            <div class="project-list-item__links">
+                                <a href="#" class="btn btn--small">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-list-item" data-tech="Python">
+                        <div class="project-list-item__image">3</div>
+                        <div class="project-list-item__content">
+                            <h2 class="project-list-item__title">Python Project</h2>
+                            <p class="project-list-item__description">Een klein Python-project waarmee ik heb geoefend met basisprincipes van programmeren, zoals variabelen, functies en gebruikersinvoer.</p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                            </div>
+                            <div class="project-list-item__links">
+                                <a href="#" class="btn btn--small">Live Demo</a>
+                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="filter-empty">Geen projecten gevonden met deze technologie.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer__text">&copy; 2026 Jouw Naam. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

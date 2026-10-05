@@ -17,19 +17,21 @@ navLinks.forEach(link => {
     });
 });
 
-// Form handling
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+// Form handling (only if contact form exists)
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-    console.log('Form submitted:', { name, email, message });
+        console.log('Form submitted:', { name, email, message });
 
-    alert('Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.');
-    contactForm.reset();
-});
+        alert('Bedankt voor je bericht! Ik neem zo snel mogelijk contact met je op.');
+        contactForm.reset();
+    });
+}
 
 // Scroll animations
 const observerOptions = {
@@ -48,3 +50,36 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
+
+// Project filters (only on projects.html)
+const projectFilters = document.querySelector('.project-filters');
+if (projectFilters) {
+    const filterButtons = projectFilters.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-list-item');
+    const filterEmpty = document.querySelector('.filter-empty');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const filter = button.dataset.filter;
+
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            let visibleCount = 0;
+
+            projectItems.forEach(item => {
+                const tech = item.dataset.tech;
+                if (filter === 'all' || tech.includes(filter)) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            if (filterEmpty) {
+                filterEmpty.classList.toggle('visible', visibleCount === 0);
+            }
+        });
+    });
+}
