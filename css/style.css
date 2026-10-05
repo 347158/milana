@@ -333,6 +333,14 @@ body {
     color: var(--color-text-light);
     font-size: 2rem;
     font-weight: bold;
+    overflow: hidden;
+}
+
+.project-list-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .project-list-item__content {
